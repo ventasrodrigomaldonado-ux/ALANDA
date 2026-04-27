@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alanda Living | Puerto Vallarta</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+.secondary{
+  background:transparent;
+  color:#d4af37;
+  border:1px solid #d4af37;
+  margin-left:10px;
+}
+
+.secondary:hover{
+  background:#d4af37;
+  color:#000;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+/* ===== BASE ===== */
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:#0a0a0a;
+  color:#eaeaea;
+  font-size:18px;
+  line-height:1.8;
+}
+
+/* ===== HERO FULL PREMIUM ===== */
+.hero{
+  height:100vh;
+  min-height:100dvh;
+  background:url('fondo.jpg') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+}
+
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.75));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1000px;
+  padding:20px;
+}
+
+/* ===== LOGO ===== */
+.logo{
+  width:180px;
+  margin-bottom:30px;
+  filter:drop-shadow(0 0 12px rgba(212,175,55,0.5));
+  transition:0.4s;
+}
+
+.logo:hover{
+  transform:scale(1.05);
+}
+
+/* ===== TITULOS ===== */
+h1{
+  font-family:'Playfair Display';
+  font-size:64px;
+  color:#d4af37;
+  margin-bottom:10px;
+}
+
+h2{
+  font-family:'Playfair Display';
+  font-size:36px;
+  color:#d4af37;
+  margin-bottom:10px;
+}
+
+h3{
+  font-size:24px;
+  color:#d4af37;
+}
+
+/* ===== TEXTO ===== */
+.sub{
+  color:#ccc;
+  letter-spacing:2px;
+  font-size:18px;
+}
+
+p{
+  font-size:18px;
+}
+
+/* ===== PRECIO ===== */
+.price{
+  font-size:34px;
+  color:#d4af37;
+  margin-top:20px;
+}
+
+/* ===== BOTONES PREMIUM ===== */
+.btn{
+  background:#d4af37;
+  color:#000;
+  padding:18px 45px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+  margin-top:25px;
+  font-size:18px;
+  transition:0.3s;
+  box-shadow:0 0 15px rgba(212,175,55,0.4);
+}
+
+.btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 0 25px rgba(212,175,55,0.6);
+}
+
+/* ===== SECCIONES FULL WIDTH ===== */
+.section{
+  padding:100px 30px;
+  width:100%;
+  max-width:1400px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+  margin-top:30px;
+}
+
+/* ===== GRID VERTICAL ===== */
+.grid-vertical{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:30px;
+}
+
+@media (min-width:768px){
+  .grid-vertical{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+/* ===== TARJETAS PREMIUM ===== */
+.card{
+  background:#111;
+  padding:55px;
+  border-radius:18px;
+  border:1px solid rgba(212,175,55,0.2);
+  margin-top:25px;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,0.6);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* ===== IMÁGENES ===== */
+img{
+  width:100%;
+  border-radius:16px;
+  margin-top:25px;
+}
+
+/* ===== GALERÍA PREMIUM ===== */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  gap:25px;
+}
+
+.gallery img{
+  height:380px;
+  object-fit:cover;
+  transition:0.4s;
+  box-shadow:0 20px 40px rgba(0,0,0,0.7);
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* ===== LISTAS ===== */
+.lista{
+  padding-left:20px;
+  line-height:1.8;
+  font-size:17px;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  padding:16px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:60px;
+  border-top:1px solid #c9a24a;
+  color:#aaa;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:768px){
+
+  h1{
+    font-size:40px;
+  }
+
+  h2{
+    font-size:26px;
+  }
+
+  .logo{
+    width:140px;
+  }
+
+  .gallery img{
+    height:240px;
+  }
+
+  .card{
+    padding:35px;
+  }
+
+}
+
+iframe, .map{
+  width:100%;
+  max-width:1400px;
+  margin:0 auto;
+  display:block;
+  border-radius:12px;
+}
+
+.music-btn{
+  position:fixed;
+  bottom:90px;
+  right:20px;
+  background:#111;
+  color:#d4af37;
+  border:1px solid #d4af37;
+  padding:12px 18px;
+  border-radius:30px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<img src="logo.png" class="logo">
+
+<h1>ALANDA LIVING</h1>
+<p class="sub">Donde el lujo y la serenidad se encuentran</p>
+
+<p>
+Vive o invierte en un desarrollo diseñado para quienes buscan comodidad, ubicación y crecimiento patrimonial en Puerto Vallarta.
+</p>
+
+<div class="price">Desde $3,015,000 MXN</div>
+
+<a class="btn" href="https://wa.me/523221077202" target="_blank">
+Solicitar información
+</a>
+
+ <a href="#zona" class="btn secondary">
+    Estudio de Zona
+  </a>
+
+</div>
+</section>
+
+<!-- CONCEPTO -->
+<section class="section">
+<h2>Un nuevo estándar residencial</h2>
+
+<div class="card">
+<p>
+Alanda Living es un desarrollo que combina diseño moderno, funcionalidad y ubicación estratégica.  
+Pensado para quienes buscan elevar su estilo de vida o invertir en una zona con crecimiento constante.
+</p>
+</div>
+</section>
+
+<!-- UBICACIÓN -->
+<section class="section">
+<h2>📍 Ubicación estratégica</h2>
+
+<img src="ubicacion.jpg">
+
+<div class="card">
+<p>
+10 min – Central Camionera<br>
+15 min – Aeropuerto<br>
+20 min – Walmart, Sam's y Galerías<br>
+25 min – Playa<br><br>
+
+Acceso directo por Av. México y conexión rápida con Bahía de Banderas.<br><br>
+
+Zona tranquila con alto potencial de crecimiento.
+</p>
+</div>
+</section>
+
+<!-- ESTUDIO DE ZONA -->
+<section id="zona" class="section">
+<h2>📊 Estudio de zona</h2>
+
+<div class="card">
+<p>
+Puerto Vallarta mantiene una demanda constante en vivienda, tanto nacional como internacional.<br><br>
+
+✔ Crecimiento urbano sostenido<br>
+✔ Alta demanda en renta<br>
+✔ Conectividad estratégica<br><br>
+
+Plusvalía estimada: 9% anual
+</p>
+</div>
+</section>
+
+<!-- DEPARTAMENTOS -->
+<section class="section">
+<h2>Departamentos</h2>
+
+<div class="grid">
+<div class="card">2 recámaras | 1 baño | 71 m²</div>
+<div class="card">2 recámaras | 2 baños + vestidor | 81.63 m²</div>
+</div>
+
+</section>
+
+<!-- AMENIDADES -->
+<section class="section">
+<h2>Amenidades tipo resort</h2>
+
+<div class="grid">
+<div class="card">Alberca</div>
+<div class="card">Jacuzzi</div>
+<div class="card">Chapoteadero</div>
+<div class="card">Áreas verdes</div>
+<div class="card">Terraza lounge</div>
+<div class="card">Wi-Fi</div>
+<div class="card">Selfie spot</div>
+<div class="card">Salón de usos múltiples</div>
+</div>
+
+</section>
+
+<!-- GALERÍA -->
+<section class="section">
+<h2>📸 Galería</h2>
+
+<div class="grid">
+<img src="fachada1.jpg">
+<img src="fachada2.jpg">
+</div>
+</section>
+
+<!-- PLANOS -->
+<section class="section">
+<h2>Distribución</h2>
+
+<div class="grid">
+<img src="plano1.jpg">
+<img src="plano2.jpg">
+</div>
+
+ <div class="grid-vertical">
+
+  <!-- DEPARTAMENTO 1 -->
+  <div class="card">
+    <h3>Modelo Esencial</h3>
+    <p class="sub">2 recámaras | 1 baño | 71 m²</p>
+
+<strong>Distribución:</strong>    <ul class="lista">
+      <li>2 recámaras</li>
+      <li>1 baño completo</li>
+      <li>Sala</li>
+      <li>Comedor</li>
+      <li>Cocina</li>
+      <li>Terraza</li>
+    </ul>
+
+    <h4>Acabados:</h4>
+    <ul class="lista">
+      <li>Piso cerámico</li>
+      <li>Cocina integral</li>
+      <li>Closets</li>
+      <li>Cancel de baño</li>
+      <li>Preparación para aire acondicionado</li>
+    </ul>
+  </div>
+
+  <!-- DEPARTAMENTO 2 -->
+  <div class="card">
+    <h3>Modelo Plus</h3>
+    <p class="sub">2 recámaras | 2 baños | 81.63 m²</p>
+
+<strong>Distribución:</strong>
+    <ul class="lista">
+      <li>2 recámaras</li>
+      <li>Recámara principal con vestidor</li>
+      <li>2 baños completos</li>
+      <li>Sala</li>
+      <li>Comedor</li>
+      <li>Cocina</li>
+      <li>Terraza</li>
+    </ul>
+
+    <h4>Acabados:</h4>
+    <ul class="lista">
+      <li>Piso cerámico</li>
+      <li>Cocina integral</li>
+      <li>Closets y vestidor</li>
+      <li>Cancel de baño</li>
+      <li>Preparación para aire acondicionado</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- CTA -->
+<section class="section">
+<h2>Invierte con visión</h2>
+
+<div class="card">
+<p>
+Una propiedad que combina ubicación, diseño y crecimiento.  
+Ideal para vivir o generar ingresos a largo plazo.
+</p>
+
+<div style="text-align: center;">
+  <a class="btn" href="https://wa.me/523221077202" target="_blank">
+    Agendar Cita
+  </a>
+</div>
+</section>
+
+<section class="section">
+  <h2>📸 Galería</h2>
+
+  <div class="gallery">
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+    <img src="img4.jpg">
+    <img src="img5.jpg">
+    <img src="img6.jpg">
+    <img src="img7.jpg">
+    <img src="img8.jpg">
+     <img src="img9.jpg">
+    <img src="img10.jpg">
+    <img src="img11.jpg">
+    <img src="img12.jpg">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<strong>Torrez & Maldonado Real Estate</strong><br>
+Lic. Veronica Torrez<br>
+licenciadatorrez08@gmail.com<br>
++52 322 107 7202 
+</footer>
+
+<a class="whatsapp" href="https://wa.me/523221077202" target="_blank">
+WhatsApp
+</a>
+
+<button onclick="toggleMusic()" class="music-btn">
+  🎵 Música
+</button>
+
+<audio id="bg-music" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<script id="musiccontrol">
+function toggleMusic(){
+  var music = document.getElementById("bg-music");
+  if(music.paused){
+    music.play();
+  }else{
+    music.pause();
+  }
+}
+</script>
+
+</body>
+</html>
